@@ -24,7 +24,7 @@ jobs:
       deps: ${{ steps.jdeps.outputs.deps }}
     steps:
       - name: Download jar file and resources
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ inputs.artifact-name }}
       - name: Set up JDK
@@ -45,7 +45,7 @@ jobs:
     needs: scan
     steps:
       - name: Download jar file and resources
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ inputs.artifact-name }}
           path: jar
